@@ -1,7 +1,8 @@
 {
   "name": "ember-drop",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An Ember addon that wraps Drop.js for making dropdowns/popout elements.",
+  "homepage": "http://rwwagner90.github.io/ember-drop/",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +12,15 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/rwwagner90/ember-drop",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": {
+    "name": "Robert Wagner",
+    "email": "rwwagner90@gmail.com",
+    "url": "https://github.com/rwwagner90"
+  },
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
@@ -41,8 +46,5 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  },
-  "dependencies": {
-    "node-sass": "^2.0.1"
   }
 }
