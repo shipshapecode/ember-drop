@@ -1,25 +1,68 @@
-# Ember-drop
+# Ember-Drop
 
-This README outlines the details of collaborating on this Ember addon.
+Ember-Drop is an Ember addon that wraps the [Drop.js](https://github.com/HubSpot/drop) library.
 
-## Installation
+It is mostly just a wrapper, but does provide a few extra features, to make common tasks easier.
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+## Getting started
 
-## Running
+To start, if you are using Ember CLI, simply run:
+```bash
+ember install:addon ember-drop
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+After installing, just include the component in the template for the page you would like to attach the drop to.
 
-## Running Tests
+```hbs
+{{ember-drop
+classes='drop-theme-arrows-bounce-dark'
+content=hoverContent
+openOn='hover'
+position='top center'
+targetSelector='.hover-element'}}
+```
 
-* `ember test`
-* `ember test --server`
+### classes
+**classes** are extra classes to add to the drop. You'll want to add classes here for themes, if you are using them.
 
-## Building
+### content
+**content** is an array of objects that denote the text, buttons, events, etc. that you want in your drop
 
-* `ember build`
+### openOn
+**openOn** is one of the following strings 'hover', 'click' or 'always'. These are pretty self explanatory.
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+### position
+**position** is a string denoting the positioning of the drop, relative to the target it's attached to.
+
+Possible options:
+```
+
+'top left'
+
+'left top'
+
+'left middle'
+
+'left bottom'
+
+'bottom left'
+
+'bottom center'
+
+'bottom right'
+
+'right bottom'
+
+'right middle'
+
+'right top'
+
+'top right'
+
+'top center'
+
+```
+
+### targetSelector
+**targetSelector** is the css selector of the element you want to attach the drop to.
+

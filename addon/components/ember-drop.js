@@ -13,8 +13,7 @@ export default Ember.Component.extend({
           var elementType = null;
           if (element.type === 'button') {
             elementType = 'button';
-          }
-          else if (element.type === 'text') {
+          } else if (element.type === 'text') {
             elementType = 'span';
           }
           if (elementType) {
