@@ -1,11 +1,16 @@
 @import "settings";
 @import "foundation";
 
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Slabo+27px);
+
 body {
   color: #000000;
   background: url('/images/cream_pixels.png');
+  font-family: 'Slabo 27px', serif;
+  font-size: 14pt;
 }
 
 h1, h2, h3, h4, h5, h6{
   color: #000000;
+  font-family: 'Oswald', sans-serif;
 }
