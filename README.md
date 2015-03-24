@@ -28,6 +28,30 @@ targetSelector='.hover-element'}}
 ### content
 **content** is an array of objects that denote the text, buttons, events, etc. that you want in your drop
 
+```js
+var content = [
+      {
+        type: 'button',
+        text: 'Change name',
+        events: {
+          click: function() {
+            this.set('name', 'Thomas Jefferson');
+          }.bind(controller)
+        }
+      },
+      {
+        type: 'text',
+        text: 'Click to change the name in the greeting'
+      }
+    ];
+```
+
+Each object in the content array has the following options:
+- **type**: The type of element you would like to create: 'button' or 'text' **(More coming soon)**
+- **text**: A string of text to display in the element
+- **events**: events is an object containing functions to be executed on a given event for the element you appended
+  - **click**: A function to execute on click of the element you appended to the drop
+
 ### openOn
 **openOn** is one of the following strings 'hover', 'click' or 'always'. These are pretty self explanatory.
 
@@ -36,31 +60,18 @@ targetSelector='.hover-element'}}
 
 Possible options:
 ```
-
 'top left'
-
 'left top'
-
 'left middle'
-
 'left bottom'
-
 'bottom left'
-
 'bottom center'
-
 'bottom right'
-
 'right bottom'
-
 'right middle'
-
 'right top'
-
 'top right'
-
 'top center'
-
 ```
 
 ### targetSelector
