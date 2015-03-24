@@ -26,7 +26,7 @@
   <div class="medium-8 columns medium-centered text-center">
     <div class="medium-6 columns">
       <div class="panel action-element text-center">
-        Actions
+        Events
       </div>
     </div>
     <div class="medium-6 columns">
@@ -40,21 +40,21 @@
 
 {{ember-drop
 classes='drop-theme-arrows-bounce-dark'
-content='You can specify openOn=\'hover\''
+content=hoverContent
 openOn='hover'
 position='top center'
 targetSelector='.hover-element'}}
 
 {{ember-drop
 classes='drop-theme-arrows-bounce-dark'
-content='Or openOn=\'click\''
+content=clickContent
 openOn='click'
 position='top center'
 targetSelector='.click-element'}}
 
 {{ember-drop
 classes='drop-theme-arrows-bounce-dark'
-content=testHtml
+content=testContent
 openOn='hover'
 position='top center'
 targetSelector='.action-element'}}
