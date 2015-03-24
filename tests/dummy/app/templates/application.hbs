@@ -1,3 +1,60 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="row">
+  <div class="medium-8 columns medium-centered text-center">
+    <h1>Ember-Drop</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-8 columns medium-centered text-center">
+    <p>Ember-Drop is an Ember addon that wraps the drop.js library.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-8 columns medium-centered text-center">
+    <div class="medium-6 columns">
+      <div class="panel hover-element text-center">
+        Hover
+      </div>
+    </div>
+    <div class="medium-6 columns">
+      <div class="panel click-element text-center">
+        Click
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-8 columns medium-centered text-center">
+    <div class="medium-6 columns">
+      <div class="panel action-element text-center">
+        Actions
+      </div>
+    </div>
+    <div class="medium-6 columns">
+      <div class="panel action-element text-center">
+        Hello {{name}}!
+      </div>
+    </div>
+  </div>
+</div>
 
-{{outlet}}
+
+{{ember-drop
+classes='drop-theme-arrows-bounce-dark'
+content='You can specify openOn=\'hover\''
+openOn='hover'
+position='top center'
+targetSelector='.hover-element'}}
+
+{{ember-drop
+classes='drop-theme-arrows-bounce-dark'
+content='Or openOn=\'click\''
+openOn='click'
+position='top center'
+targetSelector='.click-element'}}
+
+{{ember-drop
+classes='drop-theme-arrows-bounce-dark'
+content=testHtml
+openOn='hover'
+position='top center'
+targetSelector='.action-element'}}
