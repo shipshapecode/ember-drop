@@ -1,8 +1,9 @@
 /* globals Drop */
 import Ember from 'ember';
+import $ from 'jquery';
 
 export default Ember.Component.extend({
-  didInsertElement: function() {
+  initialize: function() {
     Ember.run.scheduleOnce('afterRender', this, function() {
       var drop;
       var content = document.createElement('div');
@@ -14,7 +15,7 @@ export default Ember.Component.extend({
             elementType = 'button';
           }
           else if (element.type === 'text') {
-            elementType = 'div';
+            elementType = 'span';
           }
           if (elementType) {
             var elementToAppend = document.createElement(elementType);
@@ -27,7 +28,10 @@ export default Ember.Component.extend({
                 elementToAppend.click(element.events.click);
               }
             }
-            content.append(elementToAppend);
+            var containerDiv = document.createElement('div');
+            containerDiv = $(containerDiv);
+            containerDiv.append(elementToAppend);
+            content.append(containerDiv);
           }
         });
       }
@@ -40,6 +44,12 @@ export default Ember.Component.extend({
         position: this.get('position'),
         target: document.querySelector(this.get('targetSelector'))
       });
+      this.set('drop', drop);
     });
+  }.on('didInsertElement').observes('content'),
+  willDestroyElement: function() {
+    if (this.get('drop')) {
+      this.get('drop').destroy();
+    }
   }
 });
