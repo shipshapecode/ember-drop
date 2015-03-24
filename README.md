@@ -5,6 +5,10 @@ Ember-Drop is an Ember addon that wraps the [Drop.js](https://github.com/HubSpot
 It is mostly just a wrapper, but does provide a few extra features, to make common tasks easier. Please feel free to 
 implement other Drop.js functionality, that I missed, and submit a PR!
 
+## Demo
+[![Ember-Drop](http://i.imgur.com/fdTobay.png)](http://rwwagner90.github.io/ember-drop/)
+http://rwwagner90.github.io/ember-drop/
+
 ## Getting started
 
 To start, if you are using Ember CLI, simply run:
