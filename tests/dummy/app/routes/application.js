@@ -4,33 +4,43 @@ export default Ember.Route.extend({
   setupController: function(controller, model) {
     var hoverContent = [
       {
-        type: 'text',
-        text: 'You can specify openOn=\'hover\''
+        classes: 'hover-drop',
+        text: 'You can specify openOn=\'hover\'',
+        type: 'div'
+
       }
     ];
     controller.set('hoverContent', hoverContent);
 
     var clickContent = [
       {
-        type: 'text',
-        text: 'Or openOn=\'click\''
+        classes: 'click-drop',
+        text: 'Or openOn=\'click\'',
+        type: 'div'
       }
     ];
     controller.set('clickContent', clickContent);
 
     var testContent = [
       {
+        classes: 'button-class',
         type: 'button',
         text: 'Change name',
         events: {
           click: function() {
-            this.set('name', 'Thomas Jefferson');
+            if (this.get('name') !== 'Thomas Jefferson') {
+              this.set('name', 'Thomas Jefferson');
+            }
+            else {
+              this.set('name', 'George Washington');
+            }
           }.bind(controller)
         }
       },
       {
-        type: 'text',
-        text: 'Click to change the name in the greeting'
+        classes: 'text-class',
+        text: 'Click to change the name in the greeting',
+        type: 'div'
       }
     ];
 

@@ -10,15 +10,12 @@ export default Ember.Component.extend({
       content = $(content);
       if (this.get('content') && Array.isArray(this.get('content'))) {
         this.get('content').forEach(function(element) {
-          var elementType = null;
-          if (element.type === 'button') {
-            elementType = 'button';
-          } else if (element.type === 'text') {
-            elementType = 'span';
-          }
-          if (elementType) {
-            var elementToAppend = document.createElement(elementType);
+          if (element.type) {
+            var elementToAppend = document.createElement(element.type);
             elementToAppend = $(elementToAppend);
+            if (element.classes) {
+              elementToAppend.addClass(element.classes);
+            }
             if (element.text) {
               elementToAppend.text(element.text);
             }

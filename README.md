@@ -2,7 +2,8 @@
 
 Ember-Drop is an Ember addon that wraps the [Drop.js](https://github.com/HubSpot/drop) library.
 
-It is mostly just a wrapper, but does provide a few extra features, to make common tasks easier.
+It is mostly just a wrapper, but does provide a few extra features, to make common tasks easier. Please feel free to 
+implement other Drop.js functionality, that I missed, and submit a PR!
 
 ## Getting started
 
@@ -16,7 +17,7 @@ After installing, just include the component in the template for the page you wo
 ```hbs
 {{ember-drop
 classes='drop-theme-arrows-bounce-dark'
-content=hoverContent
+content=content
 openOn='hover'
 position='top center'
 targetSelector='.hover-element'}}
@@ -31,26 +32,36 @@ targetSelector='.hover-element'}}
 ```js
 var content = [
       {
+        classes: 'button-class',
         type: 'button',
         text: 'Change name',
         events: {
           click: function() {
-            this.set('name', 'Thomas Jefferson');
+            if (this.get('name') !== 'Thomas Jefferson') {
+              this.set('name', 'Thomas Jefferson');
+            }
+            else {
+              this.set('name', 'George Washington');
+            }
           }.bind(controller)
         }
       },
       {
-        type: 'text',
-        text: 'Click to change the name in the greeting'
+        classes: 'text-class',
+        text: 'Click to change the name in the greeting',
+        type: 'div'
       }
     ];
 ```
 
 Each object in the content array has the following options:
-- **type**: The type of element you would like to create: 'button' or 'text' **(More coming soon)**
+- **classes**: Extra classes to add to the DOM element you are appending, mostly for styling purposes.
 - **text**: A string of text to display in the element
+- **type**: The type of element you would like to create: 'button', 'div', and 'span' are supported. You can pass in 
+any other element types like 'p', 'a', etc. but others have not been tested.
 - **events**: events is an object containing functions to be executed on a given event for the element you appended
   - **click**: A function to execute on click of the element you appended to the drop
+  - **(More events coming soon)**
 
 ### openOn
 **openOn** is one of the following strings 'hover', 'click' or 'always'. These are pretty self explanatory.
