@@ -34,11 +34,15 @@ export default Ember.Component.extend({
       content.addClass('content');
       content = content[0];
       drop = new Drop({
-        classes: this.get('classes'),
+        classes: this.get('classes') || '',
+        constrainToScrollParent: this.get('constrainToScrollParent') === false ? false : true,
+        constrainToWindow: this.get('constrainToWindow') === false ? false : true,
         content: content,
-        openOn: this.get('openOn'),
-        position: this.get('position'),
-        target: document.querySelector(this.get('targetSelector'))
+        openOn: this.get('openOn') || 'click',
+        position: this.get('position') || 'bottom left',
+        remove: this.get('remove'),
+        target: document.querySelector(this.get('targetSelector')),
+        tetherOptions: this.get('tetherOptions') || {}
       });
       this.set('drop', drop);
     });

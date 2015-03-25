@@ -5,7 +5,25 @@
 </div>
 <div class="row">
   <div class="medium-8 columns medium-centered text-center">
-    <p>Ember-Drop is an Ember addon that wraps the drop.js library.</p>
+    <h5>Ember-Drop is an Ember addon that wraps the
+      <a href="http://github.hubspot.com/drop/docs/welcome/">Drop.js</a> library.</h5>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-8 columns medium-centered text-center">
+    <h4>Installation</h4>
+    <pre><code class="language-bash">ember install:addon ember-drop</code></pre>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-8 columns medium-centered text-center">
+    <h4>Usage</h4>
+    <pre><code class="language-handlebars">{{usage}}</code></pre>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-8 columns medium-centered text-center">
+    <h4>Demo</h4>
   </div>
 </div>
 <div class="row">
@@ -50,6 +68,8 @@
 
 {{ember-drop
 classes='drop-theme-arrows-bounce-dark'
+constrainToScrollParent=true
+constrainToWindow=true
 content=hoverContent
 openOn='hover'
 position='top center'
@@ -57,6 +77,8 @@ targetSelector='.hover-element'}}
 
 {{ember-drop
 classes='drop-theme-arrows-bounce-dark'
+constrainToScrollParent=true
+constrainToWindow=true
 content=clickContent
 openOn='click'
 position='top center'
@@ -64,6 +86,8 @@ targetSelector='.click-element'}}
 
 {{ember-drop
 classes='drop-theme-arrows-bounce-dark'
+constrainToScrollParent=true
+constrainToWindow=true
 content=testContent
 openOn='hover'
 position='top center'

@@ -45,5 +45,14 @@ export default Ember.Route.extend({
     ];
 
     controller.set('testContent', testContent);
+
+    controller.set('usage', '{{ember-drop ' + '\n' +
+    'classes=\'drop-theme-arrows-bounce-dark\' ' + '\n' +
+    'constrainToScrollParent=true ' + '\n' +
+    'constrainToWindow=true ' + '\n' +
+    'content=hoverContent ' + '\n' +
+    'openOn=\'hover\' ' + '\n' +
+    'position=\'top center\' ' + '\n' +
+    'targetSelector=\'.hover-element\'}}');
   }
 });

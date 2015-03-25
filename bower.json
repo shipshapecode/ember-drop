@@ -12,7 +12,8 @@
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "foundation": "~5.5.0"
+    "foundation": "~5.5.0",
+    "prism": "gh-pages"
   },
   "devDependencies": {
     "drop": "~0.5.5"
