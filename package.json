@@ -1,6 +1,6 @@
 {
   "name": "ember-drop",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An Ember addon that wraps Drop.js for making dropdowns/popout elements.",
   "homepage": "http://rwwagner90.github.io/ember-drop/",
   "directories": {
