@@ -1,8 +1,8 @@
 {
-  "name": "@skeate/ember-drop",
+  "name": "ember-drop",
   "version": "0.0.5",
   "description": "An Ember addon that wraps Drop.js for making dropdowns/popout elements.",
-  "homepage": "http://rwwagner90.github.io/ember-drop/",
+  "homepage": "http://shipshapecode.github.io/ember-drop/",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -12,7 +12,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/rwwagner90/ember-drop",
+  "repository": "https://github.com/shipshapecode/ember-drop",
   "engines": {
     "node": ">= 0.10.0"
   },
