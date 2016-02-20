@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  setupController: function(controller, model) {
-    var hoverContent = [
+  setupController(controller) {
+    const hoverContent = [
       {
         classes: 'hover-drop',
         text: 'You can specify openOn=\'hover\'',
@@ -12,7 +12,7 @@ export default Ember.Route.extend({
     ];
     controller.set('hoverContent', hoverContent);
 
-    var clickContent = [
+    const clickContent = [
       {
         classes: 'click-drop',
         text: 'Or openOn=\'click\'',
@@ -21,7 +21,7 @@ export default Ember.Route.extend({
     ];
     controller.set('clickContent', clickContent);
 
-    var testContent = [
+    const testContent = [
       {
         classes: 'button-class',
         type: 'button',
