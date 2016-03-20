@@ -1,15 +1,16 @@
 /* globals Drop */
 import Ember from 'ember';
+const {Component, observer, run} = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   didInsertElement(){
     this.initialize();
   },
-  contentChanged: Ember.observer('content', function() {
+  contentChanged: observer('content', function() {
     this.initialize();
   }),
   initialize() {
-    Ember.run.scheduleOnce('afterRender', this, function() {
+    run.scheduleOnce('afterRender', this, function() {
       const content = document.createElement('div');
       if (this.get('content') && Array.isArray(this.get('content'))) {
         this.get('content').forEach((element) => {
