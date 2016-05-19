@@ -1,5 +1,7 @@
 # Ember-Drop
 
+<a href="http://shipshape.io/"><img src="http://i.imgur.com/EVjM7AV.png" width="100" height="100"/></a>
+
 [![npm version](https://badge.fury.io/js/ember-drop.svg)](http://badge.fury.io/js/ember-drop)
 [![npm](https://img.shields.io/npm/dm/ember-drop.svg)]()
 [![Ember Observer Score](http://emberobserver.com/badges/ember-drop.svg)](http://emberobserver.com/addons/ember-drop)
