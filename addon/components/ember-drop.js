@@ -38,7 +38,7 @@ export default Component.extend({
         classes: this.get('classes') || '',
         constrainToScrollParent: this.get('constrainToScrollParent') !== false,
         constrainToWindow: this.get('constrainToWindow') !== false,
-        content: content,
+        content,
         openOn: this.get('openOn') || 'click',
         position: this.get('position') || 'bottom left',
         remove: this.get('remove'),

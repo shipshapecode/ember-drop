@@ -20,7 +20,7 @@ http://shipshapecode.github.io/ember-drop/
 
 To start, if you are using Ember CLI, simply run:
 ```bash
-ember install:addon ember-drop
+ember install ember-drop
 ```
 
 After installing, just include the component in the template for the page you would like to attach the drop to.
