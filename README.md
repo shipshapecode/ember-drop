@@ -6,6 +6,8 @@
 [![npm](https://img.shields.io/npm/dm/ember-drop.svg)]()
 [![Ember Observer Score](http://emberobserver.com/badges/ember-drop.svg)](http://emberobserver.com/addons/ember-drop)
 [![Build Status](https://travis-ci.org/shipshapecode/ember-drop.svg)](https://travis-ci.org/shipshapecode/ember-drop)
+[![Code Climate](https://codeclimate.com/github/shipshapecode/ember-drop/badges/gpa.svg)](https://codeclimate.com/github/shipshapecode/ember-drop)
+[![Test Coverage](https://codeclimate.com/github/shipshapecode/ember-drop/badges/coverage.svg)](https://codeclimate.com/github/shipshapecode/ember-drop/coverage)
 
 Ember-Drop is an Ember addon that wraps the [Drop.js](https://github.com/HubSpot/drop) library.
 
