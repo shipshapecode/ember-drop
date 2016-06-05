@@ -3,6 +3,7 @@ import Ember from 'ember';
 const {Component, observer, run} = Ember;
 
 export default Component.extend({
+  tagName: '',
   didInsertElement(){
     this.initialize();
   },

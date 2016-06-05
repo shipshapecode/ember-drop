@@ -29,23 +29,50 @@
 <div class="row">
   <div class="medium-8 columns medium-centered text-center">
     <div class="medium-6 columns">
-      <div class="panel hover-element text-center">
-        Hover
-      </div>
+      {{#ember-drop
+      classes='drop-theme-arrows-bounce-dark'
+      constrainToScrollParent=true
+      constrainToWindow=true
+      content=hoverContent
+      openOn='hover'
+      position='top center'
+      targetSelector='.hover-element'}}
+        <div class="panel hover-element text-center">
+          Hover
+        </div>
+      {{/ember-drop}}
     </div>
     <div class="medium-6 columns">
-      <div class="panel click-element text-center">
-        Click
-      </div>
+      {{#ember-drop
+      classes='drop-theme-arrows-bounce-dark'
+      constrainToScrollParent=true
+      constrainToWindow=true
+      content=clickContent
+      openOn='click'
+      position='top center'
+      targetSelector='.click-element'}}
+        <div class="panel click-element text-center">
+          Click
+        </div>
+      {{/ember-drop}}
     </div>
   </div>
 </div>
 <div class="row">
   <div class="medium-8 columns medium-centered text-center">
     <div class="medium-6 columns">
-      <div class="panel action-element text-center">
-        Events
-      </div>
+      {{#ember-drop
+      classes='drop-theme-arrows-bounce-dark'
+      constrainToScrollParent=true
+      constrainToWindow=true
+      content=testContent
+      openOn='hover'
+      position='top center'
+      targetSelector='.action-element'}}
+        <div class="panel action-element text-center">
+          Events
+        </div>
+      {{/ember-drop}}
     </div>
     <div class="medium-6 columns">
       <div class="panel action-element text-center">
@@ -64,31 +91,3 @@
     </div>
   </div>
 </div>
-
-
-{{ember-drop
-classes='drop-theme-arrows-bounce-dark'
-constrainToScrollParent=true
-constrainToWindow=true
-content=hoverContent
-openOn='hover'
-position='top center'
-targetSelector='.hover-element'}}
-
-{{ember-drop
-classes='drop-theme-arrows-bounce-dark'
-constrainToScrollParent=true
-constrainToWindow=true
-content=clickContent
-openOn='click'
-position='top center'
-targetSelector='.click-element'}}
-
-{{ember-drop
-classes='drop-theme-arrows-bounce-dark'
-constrainToScrollParent=true
-constrainToWindow=true
-content=testContent
-openOn='hover'
-position='top center'
-targetSelector='.action-element'}}
