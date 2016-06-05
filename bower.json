@@ -1,15 +1,12 @@
 {
   "name": "ember-drop",
   "dependencies": {
+    "drop": "1.2.3",
     "ember": "~2.6.0-beta.2",
     "ember-cli-shims": "0.1.1",
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "foundation": "~5.5.0",
     "prism": "gh-pages"
-  },
-  "devDependencies": {
-    "drop": "1.2.3",
-    "blanket": "5e94fc30f2e694bb5c3718ddcbf60d467f4b4d26"
   }
 }
