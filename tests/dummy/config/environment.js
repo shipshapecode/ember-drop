@@ -6,11 +6,6 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
-    contentSecurityPolicy: {
-      'font-src': "'self' data: fonts.gstatic.com",
-      'script-src': "'self' 'unsafe-inline'",
-      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com"
-    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -44,8 +39,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
-    ENV.rootURL = '/ember-drop/';
+
   }
 
   return ENV;

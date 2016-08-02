@@ -1,8 +1,8 @@
-//blueprints/ember-drop/index.js
+// blueprints/ember-drop/index.js
 module.exports = {
-  normalizeEntityName: function() {}, // no-op since we're just adding dependencies
+  normalizeEntityName() {}, // no-op since we're just adding dependencies
 
-  afterInstall: function() {
-    return this.addBowerPackageToProject('drop'); // is a promise
+  afterInstall() {
+    return this.addBowerPackageToProject('drop', '1.4.2'); // is a promise
   }
 };

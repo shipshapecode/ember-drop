@@ -1,8 +1,9 @@
 import Ember from 'ember';
+const { Route } = Ember;
 
-export default Ember.Route.extend({
+export default Route.extend({
   setupController(controller) {
-    const hoverContent = [
+    let hoverContent = [
       {
         classes: 'hover-drop',
         text: 'You can specify openOn=\'hover\'',
@@ -12,7 +13,7 @@ export default Ember.Route.extend({
     ];
     controller.set('hoverContent', hoverContent);
 
-    const clickContent = [
+    let clickContent = [
       {
         classes: 'click-drop',
         text: 'Or openOn=\'click\'',
@@ -21,7 +22,7 @@ export default Ember.Route.extend({
     ];
     controller.set('clickContent', clickContent);
 
-    const testContent = [
+    let testContent = [
       {
         classes: 'button-class',
         type: 'button',
@@ -30,8 +31,7 @@ export default Ember.Route.extend({
           click: function() {
             if (this.get('name') !== 'Thomas Jefferson') {
               this.set('name', 'Thomas Jefferson');
-            }
-            else {
+            } else {
               this.set('name', 'George Washington');
             }
           }.bind(controller)
@@ -46,13 +46,15 @@ export default Ember.Route.extend({
 
     controller.set('testContent', testContent);
 
-    controller.set('usage', '{{ember-drop ' + '\n' +
-    'classes=\'drop-theme-arrows-bounce-dark\' ' + '\n' +
-    'constrainToScrollParent=true ' + '\n' +
-    'constrainToWindow=true ' + '\n' +
-    'content=hoverContent ' + '\n' +
-    'openOn=\'hover\' ' + '\n' +
-    'position=\'top center\' ' + '\n' +
-    'targetSelector=\'.hover-element\'}}');
+    controller.set('usage',
+    `{{ember-drop
+    classes='drop-theme-arrows-bounce-dark'
+    constrainToScrollParent=true
+    constrainToWindow=true
+    content=hoverContent
+    openOn='hover'
+    position='top center'
+    targetSelector='.hover-element'}}`
+  );
   }
 });
