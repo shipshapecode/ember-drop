@@ -48,13 +48,13 @@ export default Route.extend({
 
     controller.set('usage',
     `{{ember-drop
-    classes='drop-theme-arrows-bounce-dark'
-    constrainToScrollParent=true
-    constrainToWindow=true
-    content=hoverContent
-    openOn='hover'
-    position='top center'
-    targetSelector='.hover-element'}}`
+   classes='drop-theme-arrows-bounce-dark'
+   constrainToScrollParent=true
+   constrainToWindow=true
+   content=hoverContent
+   openOn='hover'
+   position='top center'
+   targetSelector='.hover-element'}}`
   );
   }
 });

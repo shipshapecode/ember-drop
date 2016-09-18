@@ -1,16 +1,35 @@
-@import "settings";
-@import "foundation";
+@import "./settings";
+@import "./foundation";
+@import "./fonts";
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Slabo+27px);
+$background1: #3D2F53;
+$background2: #624B86;
+$lightColor: #C1B5D3;
+$altLightColor: #7B7486;
+$whiteish: #C8C7D5;
 
 body {
-  color: #000000;
-  background: url('/images/cream_pixels.png');
-  font-family: 'Slabo 27px', serif;
+  background-color: $background1;
+  color: $whiteish;
+  font-family: 'Pier Sans', sans-serif;
   font-size: 14pt;
 }
 
-h1, h2, h3, h4, h5, h6{
-  color: #000000;
-  font-family: 'Oswald', sans-serif;
+pre {
+  background-color: #6E698C;
+  padding: 15px;
+  text-align: left;
+  code {
+    color: $whiteish !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $whiteish;
+  font-family: 'Pier Sans', sans-serif;
 }
