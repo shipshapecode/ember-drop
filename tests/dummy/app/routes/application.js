@@ -38,7 +38,7 @@ export default Route.extend({
         }
       },
       {
-        classes: 'text-class',
+        classes: 'text-drop',
         text: 'Click to change the name in the greeting',
         type: 'div'
       }

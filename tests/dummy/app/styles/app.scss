@@ -24,6 +24,10 @@ pre {
   }
 }
 
+.pacifico {
+  font-family: 'Pacifico';
+}
+
 h1,
 h2,
 h3,
@@ -32,4 +36,5 @@ h5,
 h6 {
   color: $whiteish;
   font-family: 'Pier Sans', sans-serif;
+  padding: 10px;
 }
