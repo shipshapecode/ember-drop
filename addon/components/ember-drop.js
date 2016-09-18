@@ -1,10 +1,10 @@
 /* globals Drop */
 import Ember from 'ember';
-const {Component, observer, run} = Ember;
+const { Component, observer, run } = Ember;
 
 export default Component.extend({
   tagName: '',
-  didInsertElement(){
+  didInsertElement() {
     this.initialize();
   },
   contentChanged: observer('content', function() {
@@ -12,7 +12,7 @@ export default Component.extend({
   }),
   initialize() {
     run.scheduleOnce('afterRender', this, function() {
-      const content = document.createElement('div');
+      let content = document.createElement('div');
       if (this.get('content') && Array.isArray(this.get('content'))) {
         this.get('content').forEach((element) => {
           if (element.type) {
@@ -35,7 +35,7 @@ export default Component.extend({
         });
       }
       content.classList.add('content');
-      const drop = new Drop({
+      let drop = new Drop({
         classes: this.get('classes') || '',
         constrainToScrollParent: this.get('constrainToScrollParent') !== false,
         constrainToWindow: this.get('constrainToWindow') !== false,

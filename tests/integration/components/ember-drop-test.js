@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {moduleForComponent, test} from 'ember-qunit';
+import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import Ember from 'ember';
 const { run } = Ember;
@@ -8,8 +8,8 @@ moduleForComponent('ember-drop', 'Integration | Component | ember drop', {
   integration: true
 });
 
-test('open on click', function (assert) {
-  const clickContent = [
+test('open on click', function(assert) {
+  let clickContent = [
     {
       classes: 'click-drop',
       text: 'Or openOn=\'click\'',
