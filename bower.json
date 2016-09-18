@@ -1,11 +1,11 @@
 {
   "name": "ember-drop",
   "dependencies": {
-    "drop": "1.4.2",
     "ember": "~2.9.0-beta.1",
     "ember-cli-shims": "0.1.3",
     "foundation": "~5.5.0",
-    "prism": "gh-pages"
+    "prism": "gh-pages",
+    "tether-drop": "1.4.2"
   },
   "devDependencies": {
     "blanket": "5e94fc30f2e694bb5c3718ddcbf60d467f4b4d26"
