@@ -4,7 +4,6 @@ import config from '../../config/environment';
 import assign from 'ember-assign-polyfill';
 const { run } = Ember;
 
-
 export default function startApp(attrs) {
   let application;
 

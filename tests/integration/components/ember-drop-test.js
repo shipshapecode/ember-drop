@@ -40,8 +40,8 @@ test('open on click', function(assert) {
   assert.equal($('.click-drop').length, 1, 'drop showing after click');
 });
 
-test('open on hover', function (assert) {
-  const hoverContent = [
+test('open on hover', function(assert) {
+  let hoverContent = [
     {
       classes: 'hover-drop',
       text: 'You can specify openOn=\'hover\'',
@@ -70,7 +70,7 @@ test('open on hover', function (assert) {
 
   assert.equal($('.hover-drop').length, 0, 'drop not showing before hover');
   this.$('.hover-element').first().mouseover();
-  run.later(this, function(){
+  run.later(this, function() {
     assert.equal($('.hover-drop').length, 1, 'drop showing on hover');
   }, 200);
 });
