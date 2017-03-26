@@ -1,7 +1,6 @@
 {
   "name": "ember-drop",
   "dependencies": {
-    "foundation": "~5.5.0",
-    "prism": "gh-pages"
+    "foundation": "~5.5.0"
   }
 }
