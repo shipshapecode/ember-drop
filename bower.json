@@ -1,6 +1,0 @@
-{
-  "name": "ember-drop",
-  "dependencies": {
-    "foundation": "~5.5.0"
-  }
-}
