@@ -15,7 +15,7 @@ It is mostly just a wrapper, but does provide a few extra features, to make comm
 implement other Drop.js functionality, that I missed, and submit a PR!
 
 ## Demo
-[![Ember-Drop](http://i.imgur.com/fdTobay.png)](http://shipshapecode.github.io/ember-drop/)
+[![Ember-Drop](http://i.imgur.com/IfvxWsk.png)](http://shipshapecode.github.io/ember-drop/)
 http://shipshapecode.github.io/ember-drop/
 
 ## Getting started
