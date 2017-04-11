@@ -64,9 +64,6 @@
     "loader.js": "^4.2.3",
     "prismjs": "^1.6.0"
   },
-  "peerDependencies": {
-    "ember-tether": "0.x"
-  },
   "engines": {
     "node": ">= 4"
   },
