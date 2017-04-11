@@ -2,9 +2,9 @@
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
-  var app = new EmberAddon(defaults, {
+  const app = new EmberAddon(defaults, {
     nodeAssets: {
-      prismjs: function() {
+      prismjs() {
         return {
           import: [
             'prism.js',
