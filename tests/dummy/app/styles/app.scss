@@ -13,17 +13,27 @@ body {
   font-size: 14pt;
 }
 
+a {
+  color: $background2;
+  text-decoration: none;
+  &:hover {
+    color: $altLightColor;
+    cursor: pointer;
+  }
+}
+
 pre {
   background-color: #6E698C;
   padding: 15px;
   text-align: left;
+  width: 100%;
   code {
-    color: $whiteish !important;
+    color: $whiteish;
   }
 }
 
 .pacifico {
-  font-family: 'Pacifico';
+  font-family: 'Pacifico', sans-serif;
 }
 
 h1,
@@ -34,5 +44,35 @@ h5,
 h6 {
   color: $whiteish;
   font-family: 'Pier Sans', sans-serif;
-  padding: 10px;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h4 {
+  font-size: 1.4375rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+.panel {
+  cursor: pointer;
+  div {
+    background-color: $altLightColor;
+    box-sizing: border-box;
+    margin: 0.25rem 0;
+    padding: 1.25rem;
+    width: 100%;
+  }
+}
+
+.button {
+  background-color: $background2;
+  color: $whiteish;
+  margin: 0.25rem 0;
+  padding: 1.25rem;
+  width: 100%;
 }

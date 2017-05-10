@@ -1,86 +1,94 @@
-<div class="medium-8 columns medium-centered text-center">
-  <h1><span class="pacifico">ember</span> drop</h1>
-</div>
+<hbox justify="center">
+  <box fill xs="11" sm="9" md="8" lg="6">
+    <centered>
+      <h1><span class="pacifico">ember</span> drop</h1>
+    </centered>
 
-<div class="medium-8 columns medium-centered text-center">
-  <h5>Ember Drop is an Ember addon that wraps the
-    <a href="http://github.hubspot.com/drop/docs/welcome/">Drop.js</a> library.</h5>
-</div>
+    <centered class="text-center">
+      <h5>Ember Drop is an Ember addon that wraps the
+        <a href="http://github.hubspot.com/drop/docs/welcome/">Drop.js</a> library.</h5>
+    </centered>
 
+    <centered class="text-center">
+      <h4>Installation</h4>
+    </centered>
 
-<div class="medium-8 columns medium-centered text-center">
-  <h4>Installation</h4>
-  <pre><code class="language-bash">ember install ember-drop</code></pre>
-</div>
+    <centered class="text-center">
+      <pre><code class="language-bash">ember install ember-drop</code></pre>
+    </centered>
 
-<div class="medium-8 columns medium-centered text-center">
-  <h4>Usage</h4>
-  <pre><code class="language-handlebars">{{usage}}</code></pre>
-</div>
+    <centered class="text-center">
+      <h4>Usage</h4>
+    </centered>
 
-<div class="medium-8 columns medium-centered text-center">
-  <h4>Demo</h4>
-</div>
+    <centered class="text-center">
+      <pre><code class="language-handlebars">{{usage}}</code></pre>
+    </centered>
 
-<div class="medium-8 columns medium-centered text-center">
-  <div class="medium-6 columns">
-    {{#ember-drop
-      classes='drop-theme-arrows-bounce-dark'
-      constrainToScrollParent=true
-      constrainToWindow=true
-      content=hoverContent
-      openOn='hover'
-      position='top center'
-      targetSelector='.hover-element'}}
-      <div class="panel hover-element text-center">
-        Hover
-      </div>
-    {{/ember-drop}}
-  </div>
-  <div class="medium-6 columns">
-    {{#ember-drop
-      classes='drop-theme-arrows-bounce-dark'
-      constrainToScrollParent=true
-      constrainToWindow=true
-      content=clickContent
-      openOn='click'
-      position='top center'
-      targetSelector='.click-element'}}
-      <div class="panel click-element text-center">
-        Click
-      </div>
-    {{/ember-drop}}
-  </div>
-</div>
+    <centered class="text-center">
+      <h4>Demo</h4>
+    </centered>
 
-<div class="medium-8 columns medium-centered text-center">
-  <div class="medium-6 columns">
-    {{#ember-drop
-      classes='drop-theme-arrows-bounce-dark'
-      constrainToScrollParent=true
-      constrainToWindow=true
-      content=testContent
-      openOn='hover'
-      position='top center'
-      targetSelector='.action-element'}}
-      <div class="panel action-element text-center">
-        Events
-      </div>
-    {{/ember-drop}}
-  </div>
-  <div class="medium-6 columns">
-    <div class="panel action-element text-center">
-      Hello {{name}}!
-    </div>
-  </div>
-</div>
+    <hbox class="text-center">
+      <centered class="panel" xs="12" sm="6">
+        {{#ember-drop
+          classes='drop-theme-arrows-bounce-dark'
+          constrainToScrollParent=true
+          constrainToWindow=true
+          content=hoverContent
+          openOn='hover'
+          position='top center'
+          targetSelector='.hover-element'}}
+          <div class="hover-element text-center">
+            Hover
+          </div>
+        {{/ember-drop}}
+      </centered>
+      <centered class="panel" xs="12" sm="6">
+        {{#ember-drop
+          classes='drop-theme-arrows-bounce-dark'
+          constrainToScrollParent=true
+          constrainToWindow=true
+          content=clickContent
+          openOn='click'
+          position='top center'
+          targetSelector='.click-element'}}
+          <div class="click-element text-center">
+            Click
+          </div>
+        {{/ember-drop}}
+      </centered>
+    </hbox>
 
-<hbox xs="8">
-  <hbox xs="12" sm="6">
-    <a href="https://github.com/rwwagner90/ember-drop/blob/master/README.md" class="button expand">Docs</a>
-  </hbox>
-  <hbox xs="12" sm="6">
-    <a href="https://github.com/rwwagner90/ember-drop" class="button expand">Github</a>
-  </hbox>
+    <hbox class="text-center">
+      <centered class="panel" xs="12" sm="6">
+        {{#ember-drop
+          classes='drop-theme-arrows-bounce-dark'
+          constrainToScrollParent=true
+          constrainToWindow=true
+          content=testContent
+          openOn='hover'
+          position='top center'
+          targetSelector='.action-element'}}
+          <div class="action-element text-center">
+            Events
+          </div>
+        {{/ember-drop}}
+      </centered>
+      <centered class="panel" xs="12" sm="6">
+        <div class="action-element text-center">
+          Hello {{name}}!
+        </div>
+      </centered>
+    </hbox>
+    <hbox class="text-center">
+      <centered xs="12" sm="6">
+        <a href="https://github.com/rwwagner90/ember-drop/blob/master/README.md" class="button">Docs</a>
+      </centered>
+      <centered xs="12" sm="6">
+        <a href="https://github.com/rwwagner90/ember-drop" class="button">Github</a>
+      </centered>
+    </hbox>
+  </box>
 </hbox>
 
