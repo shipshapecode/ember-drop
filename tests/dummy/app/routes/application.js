@@ -46,6 +46,7 @@ export default Route.extend({
 
     controller.set('testContent', testContent);
 
+    /* eslint-disable */
     controller.set('usage',
     `{{ember-drop
    classes='drop-theme-arrows-bounce-dark'
@@ -56,5 +57,6 @@ export default Route.extend({
    position='top center'
    targetSelector='.hover-element'}}`
   );
+    /* eslint-enable */
   }
 });

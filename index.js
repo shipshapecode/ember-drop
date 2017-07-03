@@ -1,19 +1,23 @@
 /* eslint-env node */
 'use strict';
 
+const fastbootTransform = require('fastboot-transform');
+
 module.exports = {
   name: 'ember-drop',
 
   options: {
     nodeAssets: {
-      'tether-drop': function() {
+      'tether-drop'() {
         return {
-          enabled: !process.env.EMBER_CLI_FASTBOOT,
           srcDir: 'dist',
           import: [
             'css/drop-theme-arrows-bounce-dark.css',
-            'js/drop.min.js',
+            'js/drop.min.js'
           ],
+          processTree(input) {
+            return fastbootTransform(input);
+          }
         };
       }
     }
