@@ -71,7 +71,7 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://shipshapecode.github.io/ember-drop/",
+    "demoURL": "https://ember-drop.shipshape.io/",
     "after": [
       "ember-tether"
     ]
