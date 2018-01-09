@@ -1,14 +1,12 @@
-import $ from 'jquery';
+import { click, find, triggerEvent } from 'ember-native-dom-helpers';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import Ember from 'ember';
-const { run } = Ember;
 
 moduleForComponent('ember-drop', 'Integration | Component | ember drop', {
   integration: true
 });
 
-test('open on click', function(assert) {
+test('open on click', async function(assert) {
   let clickContent = [
     {
       classes: 'click-drop',
@@ -35,12 +33,12 @@ test('open on click', function(assert) {
       {{/ember-drop}}`
   );
 
-  assert.equal($('.click-drop').length, 0, 'drop not showing before click');
-  this.$('.click-element').first().click();
-  assert.equal($('.click-drop').length, 1, 'drop showing after click');
+  assert.notOk(find('.click-drop', document.body), 'drop not showing before click');
+  await click('.click-element');
+  assert.ok(find('.click-drop', document.body), 'drop showing after click');
 });
 
-test('open on hover', function(assert) {
+test('open on hover', async function(assert) {
   let hoverContent = [
     {
       classes: 'hover-drop',
@@ -68,9 +66,7 @@ test('open on hover', function(assert) {
     {{/ember-drop}}`
   );
 
-  assert.equal($('.hover-drop').length, 0, 'drop not showing before hover');
-  this.$('.hover-element').first().mouseover();
-  run.later(this, function() {
-    assert.equal($('.hover-drop').length, 1, 'drop showing on hover');
-  }, 200);
+  assert.notOk(find('.hover-drop', document.body), 'drop not showing before hover');
+  await triggerEvent(find('.hover-element', document.body), 'mouseover');
+  assert.ok(find('.hover-drop', document.body), 'drop showing on hover');
 });

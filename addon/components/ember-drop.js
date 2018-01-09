@@ -1,15 +1,25 @@
 /* globals Drop */
-import Ember from 'ember';
-const { Component, observer, run } = Ember;
+import Component from '@ember/component';
+import { observer } from '@ember/object';
+import { run } from '@ember/runloop';
 
 export default Component.extend({
   tagName: '',
-  didInsertElement() {
-    this.initialize();
-  },
+
   contentChanged: observer('content', function() {
     this.initialize();
   }),
+
+  didInsertElement() {
+    this.initialize();
+  },
+
+  willDestroyElement() {
+    if (this.get('drop')) {
+      this.get('drop').destroy();
+    }
+  },
+
   initialize() {
     run.scheduleOnce('afterRender', this, function() {
       let content = document.createElement('div');
@@ -48,11 +58,5 @@ export default Component.extend({
       });
       this.set('drop', drop);
     });
-  },
-
-  willDestroyElement() {
-    if (this.get('drop')) {
-      this.get('drop').destroy();
-    }
   }
 });
