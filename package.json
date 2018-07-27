@@ -9,21 +9,21 @@
     "dropdown",
     "popout"
   ],
+  "repository": "https://github.com/shipshapecode/ember-drop",
   "license": "MIT",
   "author": {
     "name": "Robert Wagner",
     "email": "rwwagner90@gmail.com",
     "url": "https://github.com/rwwagner90"
   },
-  "homepage": "http://shipshapecode.github.io/ember-drop/",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/shipshapecode/ember-drop",
+  "homepage": "http://shipshapecode.github.io/ember-drop/",
   "scripts": {
     "build": "ember build",
-    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
+    "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
     "test:all": "ember try:each"
@@ -40,9 +40,9 @@
     "@html-next/flexi-default-styles": "^2.1.0",
     "@html-next/flexi-dsl": "^2.0.1",
     "@html-next/flexi-layouts": "^2.0.1",
-    "broccoli-asset-rev": "^2.4.5",
+    "broccoli-asset-rev": "^2.7.0",
     "codeclimate-test-reporter": "^0.5.0",
-    "ember-cli": "~3.1.0-beta.1",
+    "ember-cli": "~3.3.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-deploy": "^1.0.0",
     "ember-cli-deploy-build": "^1.1.0",
@@ -51,7 +51,7 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-qunit": "^4.1.1",
+    "ember-cli-qunit": "^4.3.2",
     "ember-cli-sass": "^7.0.0",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
@@ -59,21 +59,22 @@
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-getowner-polyfill": "2.2.0",
-    "ember-load-initializers": "^1.0.0",
+    "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-native-dom-helpers": "^0.6.2",
     "ember-prism": "^0.3.0",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~3.1.0-beta.1",
+    "ember-source": "~3.3.0",
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^1.0.0-beta.2",
     "eslint-plugin-ember": "^5.0.0",
-    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-node": "^6.0.1",
     "flexi": "^2.0.1",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "qunit-dom": "^0.6.2"
   },
   "engines": {
-    "node": "^4.5 || 6.* || >= 7.*"
+    "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
